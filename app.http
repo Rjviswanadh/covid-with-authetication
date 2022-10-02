@@ -1,0 +1,55 @@
+POST http://localhost:4010/login/
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY0NzAzODUyfQ.Xckpo3PXC9JoQS5r2U-Kg9ShYsI6i4YaIULVaFH05tU
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+###
+GET http://localhost:4010/states/
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY0NzAzODUyfQ.Xckpo3PXC9JoQS5r2U-Kg9ShYsI6i4YaIULVaFH05tU
+###
+
+GET http://localhost:4010/states/8/
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY0NzAzODUyfQ.Xckpo3PXC9JoQS5r2U-Kg9ShYsI6i4YaIULVaFH05tU
+
+{
+  "stateId": 8,
+  "stateName": "Delhi",
+  "population": 16787941
+}
+###
+POST http://localhost:4010/districts/
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY0NzAzODUyfQ.Xckpo3PXC9JoQS5r2U-Kg9ShYsI6i4YaIULVaFH05tU
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+###
+GET http://localhost:4010/districts/323/
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY0NzAzODUyfQ.Xckpo3PXC9JoQS5r2U-Kg9ShYsI6i4YaIULVaFH05tU
+###
+DELETE  http://localhost:4010/districts/322/
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY0NzAzODUyfQ.Xckpo3PXC9JoQS5r2U-Kg9ShYsI6i4YaIULVaFH05tU
+###
+PUT  http://localhost:4010/districts/323/
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjY0NzAzODUyfQ.Xckpo3PXC9JoQS5r2U-Kg9ShYsI6i4YaIULVaFH05tU
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
